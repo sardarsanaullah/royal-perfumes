@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Royal Perfumes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <div class="logo">ROYAL PERFUMES</div>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('products')">Products</a>
+        <a onclick="showSection('admin')">Admin</a>
+    </nav>
+
+    <!-- LOGIN WRAPPER WITH TOGGLE BUTTON -->
+    <div class="login-wrapper">
+        <button class="login-toggle" onclick="toggleLogin()">Admin Login</button>
+
+        <div class="admin-login" id="adminLogin">
+            <input id="username" placeholder="Username" />
+            <input id="password" type="password" placeholder="Password" />
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+</header>
+
+<section id="home">
+    <h1>Welcome to Royal Perfumes</h1>
+    <p>Discover the essence of luxury.</p>
+    <a class="whatsapp-button" href="https://wa.me/923005137053" target="_blank">Order on WhatsApp</a>
+</section>
+
+<section id="products" class="hidden">
+    <h2>Our Products</h2>
+    <div id="product-list"></div>
+</section>
+
+<section id="admin" class="hidden">
+    <h2>Admin Panel</h2>
+    <button onclick="logout()">Logout</button><br /><br />
+
+    <input id="product-name" placeholder="Product Name" />
+    <input id="product-price" placeholder="Price" />
+    <input id="product-image" placeholder="Image URL" />
+    <button onclick="addProduct()">Add Product</button>
+
+    <div id="admin-product-list"></div>
+</section>
+
+<a class="floating-whatsapp" href="https://wa.me/923005137053">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
